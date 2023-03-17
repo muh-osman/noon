@@ -1,8 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/57271530-a27b-4124-87a5-fc1d3d1a9668/deploy-status)](https://app.netlify.com/sites/mui-pro/deploys)
-
-# Credit: <https://www.youtube.com/watch?v=VKY6vbPaEDU&list=PLeWmXrh00478Ff4WxmE4PJuu9bzfyvcjH>
-
-## Getting Started with Create React App
+# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
