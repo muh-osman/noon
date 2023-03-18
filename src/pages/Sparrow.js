@@ -1,5 +1,12 @@
+import BasicTable from "./../MUI/Table";
+import { useContext } from "react"
+import { DataContext } from "../context/DataProvider"
+
 export default function Sparrow() {
+
+  const data = useContext(DataContext)
+
   return (
-    <div>Sparrow</div>
+    <BasicTable data={data[23]}/>
   )
 }

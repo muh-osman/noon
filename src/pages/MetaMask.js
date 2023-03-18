@@ -1,5 +1,12 @@
+import BasicTable from "./../MUI/Table";
+import { useContext } from "react"
+import { DataContext } from "../context/DataProvider" 
+
 export default function MetaMask() {
+
+  const data = useContext(DataContext)
+
   return (
-    <div>MetaMask</div>
+    <BasicTable data={data[14]}/>
   )
 }

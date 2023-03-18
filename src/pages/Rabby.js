@@ -1,5 +1,12 @@
+import BasicTable from "./../MUI/Table";
+import { useContext } from "react"
+import { DataContext } from "../context/DataProvider"
+
 export default function Rabby() {
+
+  const data = useContext(DataContext)
+
   return (
-    <div>Rabby</div>
+    <BasicTable data={data[18]}/>
   )
 }

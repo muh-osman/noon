@@ -1,5 +1,12 @@
+import BasicTable from "./../MUI/Table";
+import { useContext } from "react"
+import { DataContext } from "../context/DataProvider"
+
 export default function Safe() {
+
+  const data = useContext(DataContext)
+
   return (
-    <div>Safe</div>
+    <BasicTable data={data[11]}/>
   )
 }

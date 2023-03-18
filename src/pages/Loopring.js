@@ -1,5 +1,12 @@
+import BasicTable from "./../MUI/Table";
+import { useContext } from "react"
+import { DataContext } from "../context/DataProvider" 
+
 export default function Loopring() {
+
+  const data = useContext(DataContext)
+
   return (
-    <div>Loopring</div>
+    <BasicTable data={data[12]}/>
   )
 }

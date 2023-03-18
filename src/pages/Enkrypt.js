@@ -1,5 +1,12 @@
+import BasicTable from "./../MUI/Table";
+import { useContext } from "react"
+import { DataContext } from "../context/DataProvider" 
+
 export default function Enkrypt() {
+
+  const data = useContext(DataContext)
+
   return (
-    <div>Enkrypt</div>
+    <BasicTable data={data[9]}/>
   )
 }

@@ -1,5 +1,12 @@
+import BasicTable from "./../MUI/Table";
+import { useContext } from "react"
+import { DataContext } from "../context/DataProvider"
+
 export default function Status() {
+
+  const data = useContext(DataContext)
+
   return (
-    <div>Status</div>
+    <BasicTable data={data[24]}/>
   )
 }

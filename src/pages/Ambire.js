@@ -1,5 +1,12 @@
+import BasicTable from "./../MUI/Table";
+import { useContext } from "react"
+import { DataContext } from "../context/DataProvider" 
+
 export default function Ambire() {
+
+  const data = useContext(DataContext)
+
   return (
-    <div>Ambire</div>
+    <BasicTable data={data[2]}/>
   )
 }

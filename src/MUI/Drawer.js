@@ -19,8 +19,6 @@ import { Outlet } from "react-router-dom";
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import logo from "../ass/image/logo.png"
-import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
-import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
 
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -57,6 +55,9 @@ import wasabiwallet from "../ass/image/wasabiwallet.jpg"
 import web3auth from "../ass/image/web3auth.png"
 
 
+import { useContext } from "react"
+import { DataContext } from "../context/DataProvider" 
+
 
 
 
@@ -64,9 +65,12 @@ const drawerWidth = 240;
 
 function ResponsiveDrawer(props) {
 
+  const data = useContext(DataContext)
+
+
   const { pathname } = useLocation();
 
-  
+
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -78,18 +82,23 @@ function ResponsiveDrawer(props) {
     <div>
 
       <Toolbar style={{ justifyContent: "center"}}>
-        <Stack direction="row" spacing={2} sx={{alignItems: 'center'}}>
 
-          <Avatar alt="Remy Sharp" src={logo} sx={{ width: 50, height: 50 }}/>
-          <Typography style={{ textAlign: 'center', justifyContent: "center", }} align="center" variant="h4" noWrap component="h1">
-            Noon
-          </Typography>
-        </Stack>
+      <Link to="/" style={{textDecoration: "none", color: "#fff"}}>
+          <Stack direction="row" spacing={2} sx={{alignItems: 'center'}}>
+            <Avatar alt="Remy Sharp" src={logo} sx={{ width: 50, height: 50 }}/>
+            <Typography style={{ textAlign: 'center', justifyContent: "center", }} align="center" variant="h4" noWrap component="h1">
+              Noon
+            </Typography>
+          </Stack>
+        </Link>
+
       </Toolbar>
         <Divider />
 
       <List>
-        {[
+
+        {
+        [
           {
             text: "AirGap",
             icon: Arigap,
@@ -236,12 +245,12 @@ function ResponsiveDrawer(props) {
             path: "/wasabiwallet"
         },
           {
-            text: "Web3Auth",
-            icon: web3auth,
-            path: "/web3auth"
+            text: "Web3Auth", //name
+            icon: web3auth, //image
+            path: "/web3auth" //path
         },
       ]
-        .map((item, index) => {
+        .map((item) => {
           const {text, icon, path} = item
           return(
           <ListItem key={text} disablePadding button component={Link} to={path} selected={path === pathname}>
@@ -251,21 +260,11 @@ function ResponsiveDrawer(props) {
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
-          </ListItem>
-        )})}
+          </ListItem>)})
+        }
 
 <Divider />
 
-{/* <ListItem disablePadding button component={Link} to={"/about"} selected={"/about" === pathname}>
-  <ListItemButton>
-    <ListItemIcon>
-      <InfoRoundedIcon />
-    </ListItemIcon>
-    <ListItemText primary={"About"} />
-  </ListItemButton>
-</ListItem>
-
-<Divider /> */}
 
 <Stack direction="row" spacing={2} sx={{justifyContent: "center", gap: "10px", padding: "8px"}}>
   <Link to="https://www.youtube.com/@noonayn">
@@ -283,36 +282,6 @@ function ResponsiveDrawer(props) {
 
       </List>
 
-
-      {/* <List sx={{backgroundColor:"#121212", position: "sticky", bottom: 0, left: 0, padding: "0px"}}>
-        <Divider />
-
-          <ListItem disablePadding button component={Link} to={"/about"} selected={"/about" === pathname}>
-            <ListItemButton>
-              <ListItemIcon>
-                <InfoRoundedIcon />
-              </ListItemIcon>
-              <ListItemText primary={"About"} />
-            </ListItemButton>
-          </ListItem>
-
-          <Divider />
-
-          <Stack direction="row" spacing={2} sx={{justifyContent: "center", gap: "10px", padding: "8px"}}>
-            <Link to="https://www.youtube.com/@noonayn">
-              <Avatar alt="YouTube" sx={{ width: 24, height: 24, backgroundColor: "transparent"}} > <YouTubeIcon sx={{color: "#757575", '&:hover': {color: "#FF0000"}}} /> </Avatar>
-            </Link>
-            <Link to="https://twitter.com/0xnooon">
-              <Avatar alt="Twitter" sx={{ width: 24, height: 24, backgroundColor: "transparent" }} > <TwitterIcon sx={{color: "#757575", '&:hover': {color: "#00acee"}}} /> </Avatar>
-            </Link>
-        </Stack>
-
-
-          <Typography style={{ textAlign: 'center', justifyContent: "center", fontSize:"12px", fontWeight: "400",}} align="center" variant="h6" noWrap component="h1">
-              © 2023 Noon
-          </Typography>
-
-      </List> */}
     </div>
   );
 

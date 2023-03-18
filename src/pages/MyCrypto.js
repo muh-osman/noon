@@ -1,5 +1,12 @@
+import BasicTable from "./../MUI/Table";
+import { useContext } from "react"
+import { DataContext } from "../context/DataProvider" 
+
 export default function MyCrypto() {
+
+  const data = useContext(DataContext)
+
   return (
-    <div>MyCrypto</div>
+    <BasicTable data={data[15]}/>
   )
 }

@@ -1,5 +1,12 @@
+import BasicTable from "./../MUI/Table";
+import { useContext } from "react"
+import { DataContext } from "../context/DataProvider"
+
 export default function Web3Auth() {
+
+  const data = useContext(DataContext)
+
   return (
-    <div>Web3Auth</div>
+    <BasicTable data={data[29]}/>
   )
 }
