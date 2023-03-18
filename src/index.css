@@ -54,17 +54,17 @@
 }
 
 .nav-button:hover {
-  background-color: #6b6b6b;
+  background-color: #6b6b6b !important;
 }
 
 @media (max-width: 600px) {
   .css-1v5u2yv {
-    width: 100%;
+    width: 100% !important;
   }
 }
 
 .css-1anhywe-MuiTableRow-root:hover {
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.08) !important;
 }
 
 .css-1wjk1gj-MuiTable-root {

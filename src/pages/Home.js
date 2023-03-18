@@ -21,6 +21,7 @@ import { DataContext } from "../context/DataProvider"
 // Define a custom style for the chips
 const chipStyle = {
   margin: '10px',
+  borderRadius: "5px",
 };
 
 // Define a function that filters items by color
