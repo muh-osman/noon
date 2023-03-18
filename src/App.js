@@ -1,7 +1,4 @@
 import * as React from "react";
-// import "./index.css";
-import "../src/index.css"
-
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
 import Root from "./Root";
 import { Home, Airgap, AlphaWallet, Ambire, Argent, Bitcoin, Brave, CoinWallet, Coinomi, Electrum, Enkrypt, Frame, Safe, Loopring, MEWwallet, MetaMask, MyCrypto, MyEtherWallet, Pillar, Rabby, Railway, Rainbow, Samourai, Sequence, Sparrow, Status, Taho, TrustWallet, Unstoppable, WasabiWallet, Web3Auth, About } from "./pages";
