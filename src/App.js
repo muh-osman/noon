@@ -1,3 +1,4 @@
+import * as React from "react";
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
 import Root from "./Root";
 import { Home, Airgap, AlphaWallet, Ambire, Argent, Bitcoin, Brave, CoinWallet, Coinomi, Electrum, Enkrypt, Frame, Safe, Loopring, MEWwallet, MetaMask, MyCrypto, MyEtherWallet, Pillar, Rabby, Railway, Rainbow, Samourai, Sequence, Sparrow, Status, Taho, TrustWallet, Unstoppable, WasabiWallet, Web3Auth, About } from "./pages";
@@ -49,6 +50,7 @@ const router = createBrowserRouter(
       <Route path="unstoppable" element={<Unstoppable />} />
       <Route path="wasabiwallet" element={<WasabiWallet />} />
       <Route path="web3auth" element={<Web3Auth />} />
+      
       <Route path="about" element={<About />} />
     </Route>
   )
@@ -64,4 +66,4 @@ function App() {
   )
 }
 
-export default App;
+export default React.memo(App);

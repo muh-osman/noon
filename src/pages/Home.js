@@ -29,7 +29,7 @@ const filterByColor = (items, color) => {
 };
 
 // Define a function component that renders chips for filtering
-export default function Home() {
+function Home() {
 
       const items = useContext(DataContext)
 
@@ -98,6 +98,7 @@ export default function Home() {
         {/* Render filtered items */}
         <Box sx={{ flexGrow: 1, marginTop: "20px" }}>
         <Grid container spacing={2}>
+
           {filteredItems.map((item) => (
 
          <Grid item lg={3} md={4} sm={6} xs={6} key={item.id} >
@@ -120,7 +121,10 @@ export default function Home() {
          </Grid>
 
           ))}
+
           </Grid>
         </Box>
     </>
  )}
+
+export default React.memo(Home);

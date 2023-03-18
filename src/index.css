@@ -26,7 +26,6 @@
 
 .scrollable {
   overflow-x: auto;
-  /* white-space: nowrap; */
   scroll-behavior: smooth;
 
   -ms-overflow-style: none; 
@@ -54,7 +53,6 @@
   flex-shrink: 0;
   border: none;
   background-color: transparent;
-  /* background-color: red; */
 }
 
 .nav-button:hover {

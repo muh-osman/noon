@@ -11,26 +11,21 @@ import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useNavigate } from "react-router-dom";
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
-import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
-import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
-
-
-
+import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
+import ThumbDownOffAltIcon from "@mui/icons-material/ThumbDownOffAlt";
 
 export default function BasicTable(props) {
-
   React.useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
   let navigate = useNavigate();
 
   function createData(name, protein) {
     return { name, protein };
   }
-
 
   const rows = [
     createData("Buy Crypto", props.data.crypto),
@@ -50,25 +45,27 @@ export default function BasicTable(props) {
 
   return (
     <>
-      {/* <h1 sx={{textAlign: "center"}}>{props.data.name}</h1> */}
-
-      <Stack direction="row" spacing={2} sx={{ marginBottom: "20px", justifyContent: "space-between", }}>
+      <Stack
+        direction="row"
+        spacing={2}
+        sx={{ marginBottom: "20px", justifyContent: "space-between" }}
+      >
         <Button
           onClick={() => navigate("/")}
-          // variant="contained"
-          variant="outlined" 
+          variant="outlined"
           startIcon={<ArrowBackIcon />}
           sx={{ lineHeight: "unset", height: "36px" }}
         >
           Back
         </Button>
 
-        <Button 
-        variant="contained"
-        href= {props.data.url}
-        target="_blank"
-        endIcon={<OpenInNewIcon />}
-        sx={{ lineHeight: "unset", height: "36px", flex: 1 }}>
+        <Button
+          variant="contained"
+          href={props.data.url}
+          target="_blank"
+          endIcon={<OpenInNewIcon />}
+          sx={{ lineHeight: "unset", height: "36px", flex: 1 }}
+        >
           {props.data.name}
         </Button>
       </Stack>
@@ -80,9 +77,7 @@ export default function BasicTable(props) {
               <TableCell>
                 <h2>Features</h2>
               </TableCell>
-              <TableCell align="right">
-                {/* <h1></h1> */}
-              </TableCell>
+              <TableCell align="right">{/* <h1></h1> */}</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -94,7 +89,13 @@ export default function BasicTable(props) {
                 <TableCell component="th" scope="row">
                   {row.name}
                 </TableCell>
-                <TableCell align="right">{row.protein? <ThumbUpAltIcon sx={{color: "green"}}/>: <ThumbDownOffAltIcon sx={{color: "red"}}/>}</TableCell>
+                <TableCell align="right">
+                  {row.protein ? (
+                    <ThumbUpAltIcon sx={{ color: "green" }} />
+                  ) : (
+                    <ThumbDownOffAltIcon sx={{ color: "red" }} />
+                  )}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
