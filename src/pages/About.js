@@ -1,3 +1,4 @@
+import React from "react";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import Stack from "@mui/material/Stack";
@@ -7,6 +8,11 @@ import Container from '@mui/material/Container';
 
 
 export default function About() {
+  
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Container maxWidth="md" className="about">
       <h1 style={{textAlign: "center", marginBottom: "16px", fontSize: "45px", }}>About Noon</h1>
