@@ -78,7 +78,7 @@ function ResponsiveDrawer(props) {
               <ListItemButton>
                 <ListItemIcon>
                   <Avatar
-                    alt="YouTube"
+                    alt="icon"
                     src={item.image}
                     sx={{ width: 36, height: 36, backgroundColor: "#fff" }}
                   />
@@ -161,7 +161,16 @@ function ResponsiveDrawer(props) {
           >
             <MenuIcon />
           </IconButton>
-          XXXXXX
+
+
+        <div className="nav_link">
+          <Link to="/">Home</Link>
+          <span aria-hidden="true" className="short">/</span>
+          <Link to="https://www.noon.wiki/blog" target="_blank" rel="noopener noreferrer">Blog</Link>
+          <span aria-hidden="true" className="short">/</span>
+          <Link to="/about">About</Link>
+        </div>
+
         </Toolbar>
       </AppBar>
       <Box

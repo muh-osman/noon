@@ -16,6 +16,8 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
 import ThumbDownOffAltIcon from "@mui/icons-material/ThumbDownOffAlt";
 
+
+
 export default function BasicTable(props) {
   React.useEffect(() => {
     window.scrollTo(0, 0);
@@ -45,6 +47,11 @@ export default function BasicTable(props) {
 
   return (
     <>
+    <div className="profile_img_box">
+      < img className="profile_img" src={props.data.image} alt="icon" />
+    </div>
+
+
       <Stack
         direction="row"
         spacing={2}
@@ -70,7 +77,7 @@ export default function BasicTable(props) {
         </Button>
       </Stack>
 
-      <TableContainer component={Paper}>
+      <TableContainer sx={{padding: "0 25px"}} component={Paper}>
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
@@ -84,7 +91,7 @@ export default function BasicTable(props) {
             {rows.map((row) => (
               <TableRow
                 key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                sx={{ "&:last-child td, &:last-child th": { border: 0 }, "&:hover":{backgroundColor: "rgba(255, 255, 255, 0.08)"} }}
               >
                 <TableCell component="th" scope="row">
                   {row.name}

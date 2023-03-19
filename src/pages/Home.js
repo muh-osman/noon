@@ -62,6 +62,13 @@ function Home() {
 
   return (
     <>
+      <div dir="rtl" className="hero">
+        <div className="hero_text">
+          <h2>اختر محفظتك</h2>
+          <p>تحتوي المحافظ على الكثير من الميزات لذا اختر محفظتك بناءً على الميزات التي تريدها</p>
+          <p>المحفظة الصلبة (الباردة)  أفضل وسيلة لحماية الأصول المشفرة</p>
+        </div>
+      </div>
       <div className="filter-container">
        <button id="slideLeft" className="nav-button" onClick={() => scroll(-200)}>
        < ChevronLeftIcon />
@@ -81,12 +88,12 @@ function Home() {
 
         <Chip label="Android" onClick={handleChipClick} data-color="android" style={chipStyle} className={chipColors === "android" ? "chip_active" : ""} />
         <Chip label="iOS" onClick={handleChipClick} data-color="ios" style={chipStyle} className={chipColors === "ios" ? "chip_active" : ""} />
-        <Chip label="Windows" onClick={handleChipClick} data-color="windows" style={chipStyle} className={chipColors === "windows" ? "chip_active" : ""} />
-        <Chip label="Linux" onClick={handleChipClick} data-color="linux" style={chipStyle} className={chipColors === "linux" ? "chip_active" : ""} />
-        <Chip label="MacOS" onClick={handleChipClick} data-color="macos" style={chipStyle} className={chipColors === "macos" ? "chip_active" : ""} />
         <Chip label="Chrome" onClick={handleChipClick} data-color="chrome" style={chipStyle} className={chipColors === "chrome" ? "chip_active" : ""} />
         <Chip label="Firefox" onClick={handleChipClick} data-color="firefox" style={chipStyle} className={chipColors === "firefox" ? "chip_active" : ""} />
         <Chip label="Website Login" onClick={handleChipClick} data-color="website" style={chipStyle} className={chipColors === "website" ? "chip_active" : ""} />
+        <Chip label="Windows" onClick={handleChipClick} data-color="windows" style={chipStyle} className={chipColors === "windows" ? "chip_active" : ""} />
+        <Chip label="Linux" onClick={handleChipClick} data-color="linux" style={chipStyle} className={chipColors === "linux" ? "chip_active" : ""} />
+        <Chip label="MacOS" onClick={handleChipClick} data-color="macos" style={chipStyle} className={chipColors === "macos" ? "chip_active" : ""} />
 
 
       </div>
