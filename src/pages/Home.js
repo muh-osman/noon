@@ -119,7 +119,7 @@ function Home() {
                     />
                     <CardContent>
 
-                      <Typography gutterBottom variant="h5" component="div" sx={{textAlign: "center"}}>
+                      <Typography gutterBottom variant="h5" component="div" sx={{textAlign: "center", margin: 0}}>
                         {item.name}
                       </Typography>
 
