@@ -18,7 +18,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
-import logo from "../ass/image/logo.png";
+import logo from "../assets/image/logo.png";
 
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -142,7 +142,7 @@ function ResponsiveDrawer(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex",}}>
       <CssBaseline />
       <AppBar
         position="fixed"
